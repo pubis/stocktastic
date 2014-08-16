@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!--
+
+  Fivefish RDoc Generator
+  $Id$
+
+  Authors:
+  - Michael Granger <ged@FaerieMUD.org>
+
+ -->
+<html lang="en">
+<head>
+	<title>stocktastic-0.1.0</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<link href="../.." rel="prefix" />
+
+	<link href="../../css/fivefish.min.css" rel="stylesheet" />
+
+	<script src="../../js/jquery-1.7.1.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../../js/bootstrap.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../../js/searchindex.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="../../js/fivefish.min.js" type="text/javascript"
+		defer="defer" charset="utf-8" onload="initFivefish()"></script>
+</head>
+
+<body class="class-page">
+
+	<nav class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+
+				<a class="brand"
+					href="../../index.html">stocktastic-0.1.0</a>
+
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#class-dropdown">
+								Classes
+								<b class="caret"></b>
+							</a>
+						</li>
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#file-dropdown">
+								Files
+								<b class="caret"></b>
+							</a>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+				<span class="pull-right">
+					<form class="navbar-search">
+						<input type="hidden" id="navbar-search-target" value="" />
+						<input type="text" class="search-query" value=""
+							placeholder="Method, Class, or Filename" />
+					</form>
+				</span>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		
+		<header class="hero-unit">
+			<hgroup>
+								  				<h2 class="namespace">Stocktastic::Adapter::</h2>
+				  												<h1 class="class"
+					rel="popover"
+					data-original-title="In files"
+					data-content="lib/stocktastic/adapter/yahoo.rb"
+					>Yahoo</h1>
+				</p>
+							</hgroup>
+			<span class="label">class</span>
+		</header>
+
+		<section class="module-relations">
+			<dl>
+								<dt>Superclass</dt>
+								<dd class="superclass"><a href="../../Stocktastic/Adapter/Base.html">Stocktastic::Adapter::Base</a></dd>
+								
+				
+							</dl>
+		</section>
+
+		<section class="description">
+			
+<p><a href="../Adapter.html">Adapter</a> for interfacing with <a
+href="Yahoo.html">Yahoo</a> finance</p>
+		</section>
+
+				<section id="5Buntitled-5D" class="documentation-section">
+			
+		    
+						<!-- Constants -->
+			<section class="constants-list">
+				<header>
+					<h3>Constants</h3>
+				</header>
+				<dl>
+									<dt id="PARAMETER_MAP"><i class="icon-generic"></i>PARAMETER_MAP</dt>
+										<dd class="description"><p>List of available paramters This list is used as a single source of
+reference for a) mapping between requested parameters and url parameters
+and b) mapping between the result array and hash keys.</p></dd>
+														<dt id="QUOTES_URI"><i class="icon-generic"></i>QUOTES_URI</dt>
+										<dd class="description"><p>Uri used for fetching quotes</p></dd>
+													</dl>
+			</section>
+			
+			
+			<!-- Methods -->
+						
+			
+			
+			
+			
+			
+									
+						<section class="public-methods instance-methods methods">
+				<header>
+					<h3>Public Instance Methods</h3>
+				</header>
+
+								<a name="method-i-get_multiple_quotes">anchor</a>
+				<div id="method-i-get_multiple_quotes-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">get_multiple_quotes</span><span 
+							class="method-args">(symbols, options = {})</span>
+										</header>
+
+					<div class="method-description">
+											<p>Fetches quote details for multiple symbols. Last argument can specify
+options:</p>
+<ul><li>
+<p>:parameters Array of parameters to get (default is everything)</p>
+</li></ul>					
+											<div class="method-source-code" id="get_multiple_quotes-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File lib/stocktastic/adapter/yahoo.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_multiple_quotes</span> <span class="ruby-identifier">symbols</span>, <span class="ruby-identifier">options</span> = {}
+  <span class="ruby-identifier">options</span>[<span class="ruby-value">:parameters</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">PARAMETER_MAP</span>.<span class="ruby-identifier">keys</span>
+  <span class="ruby-identifier">get_quotes</span> <span class="ruby-identifier">symbols</span>, <span class="ruby-identifier">options</span>[<span class="ruby-value">:parameters</span>]
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+								<a name="method-i-get_single_quote">anchor</a>
+				<div id="method-i-get_single_quote-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">get_single_quote</span><span 
+							class="method-args">(symbol, options = {})</span>
+										</header>
+
+					<div class="method-description">
+											<p>Fetches quote details for a single symbol. Last argument can specify
+options:</p>
+<ul><li>
+<p>:parameters Array of parameters to get (default is everything)</p>
+</li></ul>					
+											<div class="method-source-code" id="get_single_quote-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File lib/stocktastic/adapter/yahoo.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_single_quote</span> <span class="ruby-identifier">symbol</span>, <span class="ruby-identifier">options</span> = {}
+  <span class="ruby-identifier">get_multiple_quotes</span>([<span class="ruby-identifier">symbol</span>], <span class="ruby-identifier">options</span>)[<span class="ruby-value">0</span>]
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+				
+			</section>
+			
+			
+			
+			
+			
+						
+		</section>
+		
+
+		<hr>
+
+		<footer>
+			<div class="container">
+				<span id="rdoc-version">Generated by RDoc 4.1.1</span> using the
+				<a id="generator-version"
+					href="http://deveiate.org/fivefish">Fivefish RDoc 0.1.0</a> generator.
+			</div>
+		</footer>
+	</div> <!-- /container -->
+
+	<!-- Class dropdown menu -->
+	<div id="class-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+			<li><a href="../../Stocktastic.html">Stocktastic</a></li>
+			<li><a href="../../Stocktastic/Adapter.html">Stocktastic::Adapter</a></li>
+			<li><a href="../../Stocktastic/Adapter/Base.html">Stocktastic::Adapter::Base</a></li>
+			<li><a href="../../Stocktastic/Adapter/Yahoo.html">Stocktastic::Adapter::Yahoo</a></li>
+			<li><a href="../../Stocktastic/Base.html">Stocktastic::Base</a></li>
+		</ul>
+	</div>
+
+	<!-- File dropdown menu -->
+	<div id="file-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+			<li><a href="../../History_rdoc.html">History</a></li>
+			<li><a href="../../Manifest_txt.html">Manifest</a></li>
+			<li><a href="../../README_rdoc.html">README</a></li>
+		</ul>
+	</div>
+
+</body>
+</html>

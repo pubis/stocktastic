@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!--
+
+  Fivefish RDoc Generator
+  $Id$
+
+  Authors:
+  - Michael Granger <ged@FaerieMUD.org>
+
+ -->
+<html lang="en">
+<head>
+	<title>stocktastic-0.1.0</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+	<link href="." rel="prefix" />
+
+	<link href="./css/fivefish.min.css" rel="stylesheet" />
+
+	<script src="./js/jquery-1.7.1.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="./js/bootstrap.min.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="./js/searchindex.js" type="text/javascript"
+		defer="defer" charset="utf-8"></script>
+	<script src="./js/fivefish.min.js" type="text/javascript"
+		defer="defer" charset="utf-8" onload="initFivefish()"></script>
+</head>
+
+<body class="file-page">
+
+	<nav class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+
+				<a class="brand"
+					href="./index.html">stocktastic-0.1.0</a>
+
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#class-dropdown">
+								Classes
+								<b class="caret"></b>
+							</a>
+						</li>
+						<li>
+							<a href="#"
+								class="dropdown-toggle"
+								data-dropdown="#file-dropdown">
+								Files
+								<b class="caret"></b>
+							</a>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+				<span class="pull-right">
+					<form class="navbar-search">
+						<input type="hidden" id="navbar-search-target" value="" />
+						<input type="text" class="search-query" value=""
+							placeholder="Method, Class, or Filename" />
+					</form>
+				</span>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		
+		<header class="hero-unit">
+					<h1 id="label-stocktastic">stocktastic<span><a href="#label-stocktastic">&para;</a> <a href="#documentation">&uarr;</a></span></h1>				</header>
+
+		<section class="description">
+			<ul><li>
+<p><a
+href="https://github.com/pubis/stocktastic">github.com/pubis/stocktastic</a></p>
+</li></ul>
+
+<h2 id="label-Description">Description<span><a href="#label-Description">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p><a href="Stocktastic.html">Stocktastic</a> fetches stock quotes</p>
+
+<p>It uses Yahoo Finance as a source by default.</p>
+
+<h2 id="label-Usage">Usage<span><a href="#label-Usage">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<h3 id="label-Basics">Basics<span><a href="#label-Basics">&para;</a> <a href="#documentation">&uarr;</a></span></h3>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;stocktastic&#39;</span>
+
+<span class="ruby-identifier">stocktastic</span> = <span class="ruby-constant">Stocktastic</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-comment"># =&gt; #&lt;Stocktastic::Base @adapter=#&lt;Stocktastic::Adapter::Yahoo&gt;&gt;</span>
+
+<span class="ruby-identifier">quote</span> = <span class="ruby-identifier">stocktastic</span>.<span class="ruby-identifier">quote</span> <span class="ruby-string">&#39;AAPL&#39;</span>
+<span class="ruby-comment"># =&gt; {:symbol=&gt;&quot;AAPL&quot;, :name=&gt;&quot;Apple Inc.&quot;, :last_trade_price_only=&gt;&quot;97.98&quot;, ...}</span>
+
+<span class="ruby-identifier">qoutes</span> = <span class="ruby-identifier">stocktastic</span>.<span class="ruby-identifier">quotes</span> [<span class="ruby-string">&#39;AAPL&#39;</span>, <span class="ruby-string">&#39;GOOG&#39;</span>, <span class="ruby-string">&#39;MSFT&#39;</span>]
+<span class="ruby-comment"># =&gt; [{:symbol=&gt;&quot;AAPL&quot;, :name=&gt;&quot;Apple Inc.&quot;, ...}, {:symbol=&gt;&quot;GOOG&quot;, ...}, ...]</span>
+
+<span class="ruby-comment"># Searching is not implemented yet</span>
+<span class="ruby-comment">#stocks = stocktastic.search &#39;Google&#39;</span>
+<span class="ruby-comment"># =&gt; [{:symbol =&gt; &#39;GOOG&#39;, :name =&gt; &#39;Google&#39;}, ...]</span>
+
+<span class="ruby-comment"># History is not implemented yet</span>
+<span class="ruby-comment">#last_month = Date.today.prev_month..Date.today</span>
+<span class="ruby-comment">#history = stocktastic.history &#39;AAPL&#39;, last__month</span>
+<span class="ruby-comment"># =&gt; [{:date=&gt;&quot;2014-08-16&quot;, :close=&gt;&quot;97.98&quot;}, ...]</span>
+</pre>
+
+<h2 id="label-Requirements">Requirements<span><a href="#label-Requirements">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<ul><li>
+<p>Ruby 1.9 or greater</p>
+</li></ul>
+
+<h2 id="label-Installation">Installation<span><a href="#label-Installation">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<pre>gem install stocktastic</pre>
+
+<h2 id="label-License">License<span><a href="#label-License">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>(The MIT License)</p>
+
+<p>Copyright © 2014 Jonas Lundqvist</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the
+&#39;Software&#39;), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the
+following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED &#39;AS IS&#39;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+		</section>
+
+
+		<hr>
+
+		<footer>
+			<div class="container">
+				<span id="rdoc-version">Generated by RDoc 4.1.1</span> using the
+				<a id="generator-version"
+					href="http://deveiate.org/fivefish">Fivefish RDoc 0.1.0</a> generator.
+			</div>
+		</footer>
+	</div> <!-- /container -->
+
+	<!-- Class dropdown menu -->
+	<div id="class-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+			<li><a href="./Stocktastic.html">Stocktastic</a></li>
+			<li><a href="./Stocktastic/Adapter.html">Stocktastic::Adapter</a></li>
+			<li><a href="./Stocktastic/Adapter/Base.html">Stocktastic::Adapter::Base</a></li>
+			<li><a href="./Stocktastic/Adapter/Yahoo.html">Stocktastic::Adapter::Yahoo</a></li>
+			<li><a href="./Stocktastic/Base.html">Stocktastic::Base</a></li>
+		</ul>
+	</div>
+
+	<!-- File dropdown menu -->
+	<div id="file-dropdown" class="dropdown-menu has-scroll">
+	<ul>
+			<li><a href="./History_rdoc.html">History</a></li>
+			<li><a href="./Manifest_txt.html">Manifest</a></li>
+			<li><a href="./README_rdoc.html">README</a></li>
+		</ul>
+	</div>
+
+</body>
+</html>

@@ -39,7 +39,7 @@
 		defer="defer" charset="utf-8" onload="initFivefish()"></script>
 </head>
 
-<body class="index-page">
+<body class="class-page">
 
 	<nav class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
@@ -87,68 +87,87 @@
 	<div class="container">
 		
 		<header class="hero-unit">
-			<h1 id="label-stocktastic">stocktastic<span><a href="#label-stocktastic">&para;</a> <a href="#documentation">&uarr;</a></span></h1><p><a href="Stocktastic.html">Stocktastic</a> fetches stock quotes</p>						<p><a class="btn btn-primary btn-large" 
-				href="README_rdoc.html">Learn more &raquo;</a></p>
-					</header>
+			<hgroup>
+								  												<h1 class="module"
+					rel="popover"
+					data-original-title="In files"
+					data-content="lib/stocktastic.rb, lib/stocktastic/adapter.rb, lib/stocktastic/adapter/base.rb, lib/stocktastic/adapter/yahoo.rb, lib/stocktastic/base.rb"
+					>Stocktastic</h1>
+				</p>
+							</hgroup>
+			<span class="label">module</span>
+		</header>
 
-		<!-- Indexes -->
-		<section id="indexes" class="row">
-			<div class="span4">
-				<ul id="class-index" class="nav nav-list">
-					<li class="nav-header">Classes/Modules</li>
-									<li><a href="./Stocktastic.html"
-						title="Stocktastic">Stocktastic</a></li>
-									<li><a href="./Stocktastic/Adapter.html"
-						title="Stocktastic::Adapter"><span class="ns">Stocktastic</span>::Adapter</a></li>
-									<li><a href="./Stocktastic/Adapter/Base.html"
-						title="Stocktastic::Adapter::Base"><span class="ns">Stocktastic</span><span class="ns">::Adapter</span>::Base</a></li>
-									<li><a href="./Stocktastic/Adapter/Yahoo.html"
-						title="Stocktastic::Adapter::Yahoo"><span class="ns">Stocktastic</span><span class="ns">::Adapter</span>::Yahoo</a></li>
-									<li><a href="./Stocktastic/Base.html"
-						title="Stocktastic::Base"><span class="ns">Stocktastic</span>::Base</a></li>
-								</ul>
-			</div>
-
-			<div class="span4">
-				<ul id="method-index" class="nav nav-list">
-					<li class="nav-header">Methods</li>
-									<li class="method"><a title="Stocktastic"
-						href="Stocktastic.html#method-c-default_adapter">::default_adapter						<span class="method-parent">[Stocktastic]</span>
-						</a>
-					</li>
-									<li class="method"><a title="Stocktastic::Base"
-						href="Stocktastic/Base.html#method-c-new">::new						<span class="method-parent">[::Base]</span>
-						</a>
-					</li>
-									<li class="method"><a title="Stocktastic::Adapter::Yahoo"
-						href="Stocktastic/Adapter/Yahoo.html#method-i-get_multiple_quotes">#get_multiple_quotes						<span class="method-parent">[::Yahoo]</span>
-						</a>
-					</li>
-									<li class="method"><a title="Stocktastic::Adapter::Yahoo"
-						href="Stocktastic/Adapter/Yahoo.html#method-i-get_single_quote">#get_single_quote						<span class="method-parent">[::Yahoo]</span>
-						</a>
-					</li>
-									<li class="method"><a title="Stocktastic::Base"
-						href="Stocktastic/Base.html#method-i-quote">#quote						<span class="method-parent">[::Base]</span>
-						</a>
-					</li>
-									<li class="method"><a title="Stocktastic::Base"
-						href="Stocktastic/Base.html#method-i-quotes">#quotes						<span class="method-parent">[::Base]</span>
-						</a>
-					</li>
-								</ul>
-			</div>
-
-			<div class="span4">
-				<ul id="file-index" class="nav nav-list">
-					<li class="nav-header">Files</li>
-									<li class="file"><a href="History_rdoc.html">History</a></li>
-									<li class="file"><a href="Manifest_txt.html">Manifest</a></li>
-									<li class="file"><a href="README_rdoc.html">README</a></li>
-								</ul>
-			</div>
-
+		<section class="module-relations">
+			<dl>
+				
+				
+							</dl>
 		</section>
+
+		<section class="description">
+					</section>
+
+				<section id="5Buntitled-5D" class="documentation-section">
+			
+		    
+						<!-- Constants -->
+			<section class="constants-list">
+				<header>
+					<h3>Constants</h3>
+				</header>
+				<dl>
+									<dt id="VERSION"><i class="icon-generic"></i>VERSION</dt>
+										<dd class="description"><p>The version of <a href="Stocktastic.html">Stocktastic</a></p></dd>
+													</dl>
+			</section>
+			
+			
+			<!-- Methods -->
+						
+						<section class="public-methods class-methods methods">
+				<header>
+					<h3>Public Class Methods</h3>
+				</header>
+
+								<a name="method-c-default_adapter">anchor</a>
+				<div id="method-c-default_adapter-doc" class="method">
+
+					<header>
+											<i class="icon-generic"></i>
+						<span class="method-name">default_adapter</span><span 
+							class="method-args">()</span>
+										</header>
+
+					<div class="method-description">
+											<p>Default adapter through which quotes are fetched.</p>					
+											<div class="method-source-code" id="default_adapter-source">
+							<pre class="prettyprint linenums"><code 
+								class="language-ruby"><span class="ruby-comment"># File lib/stocktastic.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">default_adapter</span>
+  <span class="ruby-constant">Stocktastic</span><span class="ruby-operator">::</span><span class="ruby-constant">Adapter</span><span class="ruby-operator">::</span><span class="ruby-constant">Yahoo</span>
+<span class="ruby-keyword">end</span></code></pre>
+						</div>
+										</div>
+
+					
+									</div>
+				
+			</section>
+			
+			
+			
+			
+			
+									
+			
+			
+			
+			
+			
+						
+		</section>
+		
 
 		<hr>
 
