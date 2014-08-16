@@ -2,15 +2,13 @@
 
 * https://github.com/pubis/stocktastic
 
-== DESCRIPTION:
+== Description
 
 Stocktastic fetches stock quotes
 
-== FEATURES/PROBLEMS:
+It uses Yahoo Finance as a source by default.
 
-* Get stock quotes withour fuzz...
-
-== SYNOPSIS:
+== Usage
 
 === Basics
 
@@ -34,15 +32,15 @@ Stocktastic fetches stock quotes
     #history = stocktastic.history 'AAPL', last__month
     # => [{:date=>"2014-08-16", :close=>"97.98"}, ...]
 
-== REQUIREMENTS:
+== Requirements
 
 * Ruby 1.9 or greater
 
-== INSTALL:
+== Installation
 
-* gem install stocktastic
+    gem install stocktastic
 
-== LICENSE:
+== License
 
 (The MIT License)
 
