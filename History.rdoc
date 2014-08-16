@@ -1,0 +1,18 @@
+=== 0.1.0 / 2014-08-16
+
+* Added Stocktastic::Base for main Stocktastic usage.
+  It uses the Yahoo adapter by default and can fetch quote
+  details for a single symbol or a list of symbols.
+
+      stocktastic = Stocktastic::Base.new
+      quote = stocktastic.quote 'AAPL'
+      quotes = stocktastic.quotes ['AAPL', 'MSFT']
+
+* Added Yahoo adapter which can fetch quotes from Yahoo Finance
+
+=== 0.0.1 / 2014-08-15
+
+* 1 minor enhancement
+
+  * Birthday!
+

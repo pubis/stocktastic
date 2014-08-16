@@ -1,0 +1,8 @@
+.autotest
+History.rdoc
+Manifest.txt
+README.rdoc
+Rakefile
+bin/stocktastic
+lib/stocktastic.rb
+test/test_stocktastic.rb
