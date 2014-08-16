@@ -5,4 +5,8 @@ README.rdoc
 Rakefile
 bin/stocktastic
 lib/stocktastic.rb
+lib/stocktastic/base.rb
+lib/stocktastic/adapter.rb
+lib/stocktastic/adapter/base.rb
+lib/stocktastic/adapter/yahoo.rb
 test/test_stocktastic.rb
