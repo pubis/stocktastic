@@ -1,6 +1,7 @@
 = stocktastic
 
-* https://github.com/pubis/stocktastic
+* Source - https://github.com/pubis/stocktastic
+* RDoc - http://pubis.github.io/stocktastic/
 
 == Description
 
