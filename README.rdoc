@@ -35,7 +35,7 @@ It uses Yahoo Finance as a source by default.
 
 == Requirements
 
-* Ruby 1.9 or greater
+* Ruby 2.1 or greater
 
 == Installation
 
