@@ -1,5 +1,7 @@
 = stocktastic
 
+{<img src="https://travis-ci.org/pubis/stocktastic.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/pubis/stocktastic]
+
 * Source - https://github.com/pubis/stocktastic
 * RDoc - http://pubis.github.io/stocktastic/
 
